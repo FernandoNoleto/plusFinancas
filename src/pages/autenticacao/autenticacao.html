@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar color="laranja">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>MINHA CONTA</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="signOut()" *ngIf="logado">sair</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    
+    <!-- se não estiver logado mostrará opções de login--> 
+    <button ion-button block color="facebook" (click)="entrarComFacebook()" *ngIf="!logado">FACEBOOK</button>
+    <br>
+    <button ion-button block color="azul" (click)="entrar()" *ngIf="!logado">ENTRAR</button>
+    <br>
+    <button ion-button block clear (click)="criarConta()" *ngIf="!logado">OU CRIAR UMA CONTA</button>
+    <!-- se não estiver logado mostrará opções de login-->
+
+    <!--Se estiver logado mostrará informações do usuário-->
+    <ion-card *ngIf="logado">
+        <ion-card-content>
+            <ion-card-title>{{emailUsuario}}</ion-card-title>
+        </ion-card-content>
+    </ion-card>
+    <!--Se estiver logado mostrará informações do usuário-->
+
+
+    <ion-footer no-shadow *ngIf="logado">
+        <ion-toolbar position="bottom">
+            <button ion-button color="danger" block (click)="deletarConta()">
+                EXCLUIR MINHA CONTA
+            </button>
+        </ion-toolbar>
+    </ion-footer>   
+
+</ion-content>

@@ -1,0 +1,32 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-facebook4": {
+      "APP_ID": "1930104910583637",
+      "APP_NAME": "+Finanças",
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    }
+  },
+  "dependent_plugins": {}
+}
