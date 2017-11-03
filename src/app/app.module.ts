@@ -3,7 +3,11 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { Facebook } from '@ionic-native/facebook';
+import { Geolocation } from '@ionic-native/geolocation';
+import { NativeGeocoder } from '@ionic-native/native-geocoder';
+import { Camera } from '@ionic-native/camera';
 
 //Páginas
 import { MyApp } from './app.component';
@@ -16,6 +20,7 @@ import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthProvider } from '../providers/auth/auth';
+import { PhotoProvider } from '../providers/photo/photo';
 
 
 //Configurações do projeto no firebase
@@ -41,8 +46,8 @@ var config = {
         BrowserModule,
         IonicModule.forRoot(MyApp),
         AngularFireModule.initializeApp(config),
-        AngularFireAuthModule
-        //AngularFireDatabaseModule
+        AngularFireAuthModule,
+        AngularFireDatabaseModule
     ],
     bootstrap: [IonicApp],
     entryComponents: [
@@ -57,8 +62,12 @@ var config = {
         StatusBar,
         SplashScreen,
         Facebook,
+        Geolocation,
+        Camera,
+        NativeGeocoder,
         {provide: ErrorHandler, useClass: IonicErrorHandler},
-        AuthProvider
+        AuthProvider,
+        PhotoProvider
     ]
 })
 export class AppModule {}

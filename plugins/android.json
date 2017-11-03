@@ -26,6 +26,18 @@
     },
     "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
+    },
+    "cordova-plugin-nativegeocoder": {
+      "PACKAGE_NAME": "io.ionic.plusFinancas"
     }
   },
   "dependent_plugins": {}
