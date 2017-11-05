@@ -1,0 +1,102 @@
+<ion-header>
+    <ion-navbar color="laranja">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Lista de compras</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="obterValor({value: 0})">listas salvas</button>
+        </ion-buttons> 
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding> 
+
+    <ion-item>
+        <ion-label>Arroz</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="arroz"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Feijão</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="feijao"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Óleo</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="oleo"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Açúcar</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="acucar"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Café</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="cafe"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Leite em pó</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="leiteempo"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Sal</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="sal"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Macarrão</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="macarrao"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Extrato de tomate</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="extratoTomate"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Tempero completo</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="tempero"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Achocolatado em pó</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="achocolatado"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Molho de tomate</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="molhoTomate"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Farinha de trigo</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="farinhaTrigo"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Gelatina</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="gelatina"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Biscoito</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="biscoito"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Milho verde</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="milho"></ion-checkbox>
+    </ion-item> 
+    
+    <ion-fab right bottom>
+        <button ion-fab color="dark" (click)="cadastrar()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+
+</ion-content>

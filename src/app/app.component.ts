@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { AutenticacaoPage } from '../pages/autenticacao/autenticacao';
+import { ListadecomprasPage } from '../pages/listadecompras/listadecompras';
 
 @Component({
   templateUrl: 'app.html'
@@ -19,20 +20,21 @@ export class MyApp {
     constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
         this.initializeApp();
         this.pages = [
-            { title: 'Minha conta', component: AutenticacaoPage },
-            { title: 'Home', component: HomePage }
+            { title: 'MINHA CONTA', component: AutenticacaoPage },
+            { title: 'HOME', component: HomePage },
+            { title: 'LISTA DE COMPRAS', component: ListadecomprasPage },
         ];
 
     }
 
     initializeApp() {
         this.platform.ready().then(() => {
-        // Okay, so the platform is ready and our plugins are available.
-        // Here you can do any higher level native things you might need.
-        this.statusBar.overlaysWebView(true);
-        //this.statusBar.styleDefault();
-        this.statusBar.backgroundColorByHexString('#cc6908');
-        this.splashScreen.hide();
+            // Okay, so the platform is ready and our plugins are available.
+            // Here you can do any higher level native things you might need.
+            this.statusBar.overlaysWebView(true);
+            //this.statusBar.styleDefault();
+            this.statusBar.backgroundColorByHexString('#cc6908');
+            this.splashScreen.hide();
         });
     }
 
