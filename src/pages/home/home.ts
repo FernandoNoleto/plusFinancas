@@ -190,7 +190,7 @@ export class HomePage {
                 },{
                 text: 'Demo Photo',
                 handler: () => {
-                    this.srcImage = '../../assets/imgs/cupom.jpg';
+                    this.srcImage = '../../assets/imgs/demo.png';
                 }
                 },{
                 text: 'Cancel',
@@ -221,9 +221,13 @@ export class HomePage {
         let loader = this.loadingCtrl.create({
             content: 'Please wait...'
         });
-        loader.present();
+        //loader.present();
         (<any>window).OCRAD(document.getElementById('image'), text => {
-            loader.dismissAll();
+            //loader.dismissAll();
+            this.alertCtrl.create({
+                message: text,
+                buttons: ['OK']
+            }).present();
             alert(text);
             console.log(text);
         });
